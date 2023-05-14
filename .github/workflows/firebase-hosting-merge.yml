@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         env:
-          REACT_APP_NAME: '${{ env.DEV_NAME }}'
+          REACT_APP_NAME: '${{ env.PROD_NAME }}'
       - run: echo "Hello $REACT_APP_NAME" && npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
