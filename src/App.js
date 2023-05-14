@@ -9,6 +9,7 @@ function App() {
         <p>
           Testing Firebase Hosting Check!!!
         </p>
+        <p>${process.env.NAME}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
