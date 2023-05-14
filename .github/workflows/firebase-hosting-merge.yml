@@ -6,12 +6,11 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - master
-env:
-  REACT_APP_NAME: '${{ env.PROD_NAME }}'
-
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_NAME: '${{ env.PROD_NAME }}'
     steps:
       - uses: actions/checkout@v3
       - run: echo "Hello $REACT_APP_NAME" && npm ci && npm run build
