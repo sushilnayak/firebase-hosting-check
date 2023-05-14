@@ -7,6 +7,8 @@ jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
+    environment:
+      name: DEV
     env:
       REACT_APP_NAME: ${{ vars.DEV_NAME }}
     steps:
