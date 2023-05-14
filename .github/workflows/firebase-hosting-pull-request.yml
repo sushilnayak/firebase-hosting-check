@@ -8,7 +8,7 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     env:
-      REACT_APP_NAME:  '${{ secrets.DEV_NAME }}'
+      REACT_APP_NAME: ${{ secrets.DEV_NAME }}
     steps:
       - uses: actions/checkout@v3
       - run: echo "Hello $REACT_APP_NAME" && npm ci && npm run build
